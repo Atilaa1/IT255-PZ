@@ -1,0 +1,94 @@
+<app-navbar></app-navbar>
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #282d32;">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#" style="color: white;">Lekovi</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <button *ngIf="user?.admin" (click)="clickAddMedicine()" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">Dodaj lek</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<br>
+<div class="mb-3" style="color: white;">
+    <input [(ngModel)]="searchText" placeholder="Pretraga">
+</div>
+<table class="table table-striped mt-3">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Slika</th>
+            <th *ngIf="user?.admin" scope="col">ID</th>
+            <th scope="col">Ime</th>
+            <th scope="col">Kompanija</th>
+            <th scope="col">Doza</th>
+            <th scope="col">Opis</th>
+            <th scope="col">Akcija</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let row of medicine | filter:searchText" style="color:white ;">
+            <td><img src="{{row.img}}" alt="" width="100px" height="100px"></td>
+            <td *ngIf="user?.admin">{{row.id}}</td>
+            <td>{{row.name}}</td>
+            <td>{{row.company}}</td>
+            <td>{{row.dose}}</td>
+            <td>{{row.description}}</td>
+            <td>
+                <button *ngIf="user?.admin" [routerLink]="['/edit/'+row.id]" class="btn btn-info" type="button">Edit</button>
+                <button (click)="deleteMedicine(row)" class="btn btn-danger mx-3">Delete</button>
+                <button (click)="reserveMedicine(row)" class="btn btn-success">Rezerviši lek</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Detalji o leku</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form [formGroup]="formValue">
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="id" class="form-label">Id</label>
+                        <input type="text" formControlName="id" class="form-control" id="id">
+                    </div>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Ime</label>
+                        <input type="text" formControlName="name" class="form-control" id="name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="company" class="form-label">Kompanija</label>
+                        <input type="text" formControlName="company" class="form-control" id="company">
+                    </div>
+                    <div class="mb-3">
+                        <label for="dose" class="form-label">Doza</label>
+                        <input type="text" formControlName="dose" class="form-control" id="dose">
+                    </div>
+                    <div class="mb-3">
+                        <label for="description" class="form-label">Opis</label>
+                        <input type="text" formControlName="description" class="form-control" id="description">
+                    </div>
+                    <div class="mb-3">
+                        <label for="img" class="form-label">Slika</label>
+                        <input type="text" formControlName="img" class="form-control" id="img">
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="cancel" class="btn btn-secondary" data-bs-dismiss="modal">Zatvori</button>
+                    <button type="submit" *ngIf="showAdd" (click)="postMedicineDetails()" class="btn btn-primary">Dodaj</button>
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

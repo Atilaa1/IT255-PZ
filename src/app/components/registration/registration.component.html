@@ -1,0 +1,14 @@
+<body style="background-color: #202327; color: #f0f9ff; font-size: 20px; text-align: center; padding: 20px;">
+    <h3>Unesite vase podatke</h3>
+    <form [formGroup]="registerForm" (ngSubmit)="submitForm()" style="margin: auto; width: 50%; padding: 10px;">
+        <div class="inputBox">
+            <input id="uname" type="text" name="Username" placeholder="Username" formControlName="username" style="width: 30%; height: 30px; margin: 10px 0;"><br>
+            <input id="mail" type="text" name="mail" placeholder="Mail" formControlName="mail" style="width: 30%; height: 30px; margin: 10px 0;"><br>
+            <input id="pass" type="password" name="Password" placeholder="Password" formControlName="password" style="width: 30%; height: 30px; margin: 10px 0;"><br>
+        </div>
+        <input type="submit" name="" value="Register" style="width: 20%; height: 40px; margin: 10px 0;">
+    </form>
+    <div>
+        <a [routerLink]="['/']" style=" color: #f0f9ff">Sign in<br> </a>
+    </div>
+</body>

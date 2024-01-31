@@ -1,0 +1,118 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "atila",
+      "password": "1234",
+      "mail": "atila@gmail.com",
+      "admin": true
+    },
+    {
+      "id": 2,
+      "username": "pera",
+      "password": "detlic",
+      "mail": "pera@gmail.com",
+      "admin": false
+    },
+    {
+      "id": 3,
+      "username": "beli",
+      "password": "crnac",
+      "mail": "crnac@gmail.com",
+      "admin": false
+    },
+    {
+      "id": 4,
+      "username": "ljubica",
+      "password": "12345",
+      "mail": "lj@gmail.com",
+      "admin": false
+    },
+    {
+      "id": 5,
+      "username": "NekiTamo",
+      "password": "12345",
+      "mail": "neki@gmail.com",
+      "admin": false
+    },
+    {
+      "id": 6,
+      "username": "Olrajt",
+      "password": "12345",
+      "mail": "Men@gmail.com",
+      "admin": false
+    },
+    {
+      "id": 7,
+      "username": "omajeva",
+      "password": "nanideska",
+      "mail": "mo@sinderju.com",
+      "admin": false
+    }
+  ],
+  "doctors": [
+    {
+      "id": 1,
+      "name": "Gregory",
+      "surname": "House",
+      "speciality": "Diagnostician",
+      "img": "https://miro.medium.com/max/1400/1*zCw9YQICYZzozYZsqeIiYA.png"
+    },
+    {
+      "id": 2,
+      "name": "Stephen",
+      "surname": "Strange",
+      "speciality": "Cardiothoracic surgeon",
+      "img": "https://i.pinimg.com/originals/a0/9d/d9/a09dd9fcc643fafdc830799536f8ce02.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Doctor",
+      "surname": "Who",
+      "speciality": "Doctor of Everything",
+      "img": "https://ew.com/thmb/oRqYCZKLCtD_YJwbPSf3w-nKYl4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/doctor-who-1-2000-21ef887f7c804344921b4a84f175f900.jpg"
+    }
+  ],
+  "medicine": [
+    {
+      "id": 1,
+      "name": "Ibuprofen",
+      "company": "Amazon",
+      "dose": "200mg",
+      "description": "This product contains ibuprofen 200 mg, a pain reliever and fever reducer (NSAID); compare to the active ingredient in Advil Ibuprofen Tablets",
+      "img": "https://m.media-amazon.com/images/I/71byBwaWpuL._AC_UF1000,1000_QL80_.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Ibuprofen",
+      "company": "Equate",
+      "dose": "200mg",
+      "description": "This product contains ibuprofen 200 mg, a pain reliever and fever reducer (NSAID); compare to the active ingredient in Advil Ibuprofen Tablets",
+      "img": "https://i5.walmartimages.com/seo/Equate-Ibuprofen-Mini-Softgel-Capsules-200-mg-160-Count_05d56dcc-a37c-4694-af9e-3e132505d767.615a564ec6c46b345d794deda7a9f9fd.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF"
+    },
+    {
+      "id": 3,
+      "name": "Paracetamol",
+      "company": "Galenika",
+      "dose": "500mg",
+      "description": "This product is used for treating headaches, muscle, menstural pain and tootaches.",
+      "img": "https://galenika.hr/wp-content/uploads/2019/03/Paracetamol-kutija.png"
+    },
+    {
+      "id": 4,
+      "name": "Paracetamol",
+      "company": "Bell's Healthcare",
+      "dose": "500mg",
+      "description": "This product is used for treating headaches, muscle, menstural pain and tootaches.",
+      "img": "https://assets.sainsburys-groceries.co.uk/gol/8075006/1/640x640.jpg"
+    },
+    {
+      "id": 5,
+      "name": "GigaChad",
+      "company": "Chadovski",
+      "dose": "kkao os",
+      "description": "Mew",
+      "img": "https://i.ytimg.com/vi/Ux5cQbO_ybw/maxresdefault.jpg"
+    }
+  ]
+}

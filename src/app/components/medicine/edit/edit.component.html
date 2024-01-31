@@ -1,0 +1,30 @@
+<app-navbar></app-navbar>
+
+<body>
+    <section class="section">
+        <div class="div1" style="text-align: center;">
+            <div class="div2">
+                <h2 style="color: white;">Izmenite lek</h2>
+                <form *ngIf="registerForm" [formGroup]="registerForm" (ngSubmit)="submitForm()">
+                    <div class="div3">
+                        <input class="input" formControlName="name" type="text" placeholder="name">
+                    </div>
+                    <div class="div3">
+                        <input class="input" formControlName="company" type="text" placeholder="company">
+                    </div>
+                    <div class="div3">
+                        <input class="input" formControlName="dose" type="text" placeholder="dose">
+                    </div>
+                    <div class="div3">
+                        <input class="input" formControlName="description" type="text" placeholder="description">
+                    </div>
+                    <div class="div3">
+                        <input class="input" formControlName="img" type="text" placeholder="img">
+                    </div>
+                    <div class="div3">
+                        <input class="input" type="submit" value="Promeni" name="posalji">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
